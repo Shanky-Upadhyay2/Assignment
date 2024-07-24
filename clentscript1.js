@@ -1,1 +1,0 @@
-alert("file name is clientscript1.js"); //clientscript1.js
