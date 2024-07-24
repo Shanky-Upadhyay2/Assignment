@@ -1,0 +1,1 @@
+alert("this mesage is from external javascript");
