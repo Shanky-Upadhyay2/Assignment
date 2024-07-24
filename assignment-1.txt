@@ -1,0 +1,96 @@
+                                            Assignment-1,  day-1 
+1. What are the popup boxes in javascript?
+Ans. alert-box confirm-box, promt-box.
+
+What is JavaScript engine for Safari?
+Ans. Javascript Core.
+
+3.  Test the following requirement using JavaScript
+
+		a.   Create two separate *.js files (Names :  ClientScripts1.js, ClientScripts2.js)
+                Ans. 1. alert("file name is clientscript1.js"); //clientscript1.js
+                     2. alert("file name is clientscript2.js"); //clientscript2.js
+
+
+		b.   Write some messages using alert() .  Message should contains the file name
+                Ans. 1. alert("file name is clientscript1.js");
+                     2. alert("file name is clientscript2.js");
+
+
+		c.   Import the above js files in other *.html document and observe.
+                Ans. <html>
+                     <head>
+                     <!-- <script src="clentscript1.js"></script>
+                      -->
+                     <script src="C2ientscript2.js"></script>
+                       </head>
+                       <body>
+                       </body>
+                       </html> 
+The JS included first in html will display its output.
+
+4.   Do some changes and observe	
+		a.  Give some wrong file name while import and observe the messages in console window
+                Ans. assignment1.html:5 GET http://127.0.0.1:5500/Day-1/C2ientscript2.js net::ERR_ABORTED 404 (Not Found)
+		
+
+                b.   Is  Filename case sensitive check practically?
+                Ans.Yes.
+
+5.   What are the key differences between Java and JavaScript?
+Ans. Java is an OOP programming language, and it helps to create applications that function in a virtual machine or browser, while JavaScript is an OOP
+     scripting language. Also, the JavaScript code runs on a browser only
+
+
+                                                                
+
+Assignment-2
+~~~~~~~~~~~~
+1.   Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
+Ans. 1. Using Browser Setting: Access the browser setting or preference and locate the option to disable Javascript.
+     2. Using Extensions/Add ons:
+
+ 
+2.   What is the difference between undefined and not defined in JavaScript?
+Ans. The primary distinction between undefined and not defined is:
+     A variable that has been declared but not assigned a value is undefined . A variable that has not been declared at all is not defined .
+
+
+3.   Difference between ==  and ===?
+Ans.  == is used for comparing two variables, but it ignores the datatype of variable whereas === is used for comparing two variables,
+      but this operator also checks datatype and compares two values.
+
+
+4.   What does the isNaN() function?
+Ans. isNaN() returns true if a number is Not-a-Number.
+
+ 
+5.   Difference between Client side JavaScript and Server side JavaScript?
+Ans. Server Side Scripting:
+     This type of scripting usually occurs on a website’s back-end. Any random user won’t get access to view whatever happens over here.
+  
+     Client-Side Scripting
+     This type of scripting basically refers to the code present in the HTML page of a client. The client-side scripting usually attaches to the concerned
+     browser in any language that’s compatible with that browser.     
+
+6. Practical :  Write a JavaScript code to display Employee details as follows in console window: 
+				Empno : 12645,  Ename  :  Scott,  Job : Manager, Salary :  45000
+
+Ans. <html>
+    <head></head>
+    <body>
+        <script>
+            var Empno = 12645;
+            var Ename =  "Scott";
+            var Job   =  "Manager";
+            var Salary = "45000";
+
+            console.log("Employee details :" + "Empno " + "= " + Empno + " "+ "Ename " + "= " +  Ename + " Job " +"= "+  Job + " salary " +"="+" "+ Salary);
+        </script>
+    </body>
+</html>
+
+
+
+
+                     
