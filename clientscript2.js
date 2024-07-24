@@ -1,1 +1,0 @@
-alert("file name is clientscript2.js");
