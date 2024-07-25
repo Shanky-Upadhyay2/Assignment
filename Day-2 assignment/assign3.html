@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Login</h2>
+    <hr>
+    <fieldset>
+        <legend>User Login</legend>
+        username: <input type="text" id="t1">
+        <br><br>
+        Password: <input type="password" id="t2"><br><br>
+        <input type="button" onclick="buttonclick()" value="get message">
+        
+        <p id="p1"></p>
+
+        <script>
+            function buttonclick(){
+            var obj1 =document.getElementById("t1");
+            var obj2 =document.getElementById("t2");
+            var pobj = document.getElementById("p1");
+            // obj.value = "scott";
+            
+            var uid = obj1.value;
+            var pwd = obj2.value;
+    
+            if(uid == "admin" && pwd == "1234"){
+                document.getElementById("p1").innerHTML = "welcome admin";
+                document.getElementById("p1").style.color = "green";
+            }
+    
+            else{
+                document.getElementById("p1").innerHTML = "Invalid username or password";
+                document.getElementById("p1").style.color = "red";
+            }
+            // pobj.innerHTML = msg;
+            }
+        </script>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Producr Details</h2>
+    <hr>
+    Product Name: <input type="text" id="i1">
+    Unit Price: <input type="text" id="u1">
+    Quantity: <input type="text" id="q1"/>
+    <input type="button"  onclick="perform()" value="get Total">
+
+    <p1 id="p1"></p1>
+
+    <script>
+        function perform(){
+            var pd = document.getElementById("i1");
+            var up = Number(document.getElementById("u1").value);
+            var qu = Number(document.getElementById("q1").value);
+
+            let discount = 0
+
+            if(qu > 30){
+                discount = 20;
+                
+            }
+            else if(qu > 20)
+            {
+                discount = 15;
+                
+            }
+            else if(qu > 10)
+            {
+                discount = 10;
+            }
+
+           var sum = (qu*up) - (discount/100)*(qu*up);
+           
+           alert("Do you want to continue");
+            document.getElementById("p1").innerHTML = "Total ammount:" + sum;
+        }
+    </script>
+
+</body>
+</html>

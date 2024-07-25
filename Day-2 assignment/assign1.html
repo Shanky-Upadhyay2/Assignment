@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mathematical Operation</h2>
+    <hr>
+    First Number: <input type="text" id="n1">
+    Second Number: <input type="text" id="n2">
+    <input type="button" onclick="perform(event)" value="add">
+    <input type="button" onclick="perform(event)" value="sub">
+    <input type="button" onclick="perform(event)" value="mul">
+
+
+    <p id="p1"></p>
+    
+    <script>
+
+        // var find_operator = event.target.id;
+        // console.log(find_operator);
+        function perform(event){
+            var num1 = Number(document.getElementById("n1").value);
+            var num2 = Number(document.getElementById("n2").value);
+            var find_operator = event.target.value;
+            console.log(find_operator);
+          
+           
+
+            if(find_operator == "add")
+        {
+            var sum = num1+num2;
+            var msg =  "Result:" + sum;
+            document.getElementById("p1").innerHTML = msg;
+        }
+           
+        else if(find_operator == "sub"){
+            var subt = num1-num2;
+            var msg =  "Result:" + subt;
+            document.getElementById("p1").innerHTML = msg;
+        }
+           
+
+        else if(find_operator == "mul"){
+            var mul = num1*num2;
+            var msg =  "Result:" + mul;
+            document.getElementById("p1").innerHTML = msg;
+        }
+        }
+           
+        // function perform1(){
+        //     var num1 = Number(document.getElementById("n1").value);
+        //     var num2 = Number(document.getElementById("n2").value);
+            
+        // }
+
+
+        // function perform2(){
+        //     var num1 = Number(document.getElementById("n1").value);
+        //     var num2 = Number(document.getElementById("n2").value);
+           
+        // }
+          
+           
+            
+            
+            
+
+           
+        
+    </script>
+
+</body>
+</html>

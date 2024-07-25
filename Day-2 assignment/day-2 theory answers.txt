@@ -1,0 +1,15 @@
+Assignment-1 Day-2
+
+
+4.   What is BOM?  DOM?   Diff.  between BOM vs DOM? 
+Ans. DOM is a programming interface for HTML and XML documents, that allows to create, manipulate, or delete the element from 
+     the document. It defines the logical structure of documents and the way a document is accessed and manipulated.
+
+     BOM is a browser-specific convention referring to all the objects exposed by the web browser. The BOM allows JavaScript 
+     to “interact with” the browser. The window object represents a browser window and all its corresponding features.
+
+
+5.   How to use  document.getElementsByTagName()  method?
+Ans. The document. getElementsByTagName() method is a core function of JavaScript that provides an easy way to select
+     elements from the DOM (Document Object Model). It takes a single argument, which is the HTML tag name, and returns
+     an array of elements in the DOM that have that tag name.
