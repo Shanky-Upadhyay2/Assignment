@@ -1,0 +1,48 @@
+                      Assignment-3
+
+
+a.    Write a JavaScript code to reverse the array elements (Hint : DO NOT use pre-defined method for reverse).
+
+Ans.  var arr = [10, 20, 30, 40, 50];
+
+      for(let i = arr.length-1; i >= 0; i--)
+      {
+      console.log(arr[i]);
+      }
+
+b.   Implement the following requirement:
+			-->  Create array of numbers  --- around 15 numbers 
+			-->  Find out sum of all even position numbers 
+			-->  Find out sum of all odd position numbers 
+			-->  Create another array store these two values in that. 
+			--> Display that result array 
+
+Ans. var arr = [1, 2, 3,4 ,5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+let evensum = 0, oddsum=0;
+for(let i = 0; i < arr.length; i++){
+     if(i%2==0)
+     {
+        evensum = evensum+arr[i];
+     }
+     else{
+        oddsum = oddsum+arr[i];
+     }
+     }
+
+     console.log(evensum);
+     console.log(oddsum);
+
+     let arr1 = [];
+
+     arr1.push(evensum);
+     arr1.push(oddsum);
+
+     console.log(arr1);
+
+
+c.    How to add a new item using splice method?  Check items should not be duplicate, what will be conditions need to write.
+
+Ans.  arr.splice(1,0,19);
+      console.log(arr);
+
+
