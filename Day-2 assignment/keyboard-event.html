@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>User Information</legend>
+        User name: <input type="text" id="t1" placeholder="enter username" onblur="checkusername()" autofocus>
+        <span id="s1"></span>
+        <br><br>
+
+        User age: <input type="text" id="t2" placeholder="enter age" onkeypress="validateage(event)">
+        <span id="s2"></span>
+        <br><br>
+    </fieldset>
+
+    <script>
+        function checkusername()
+        {
+            var txtobj = document.getElementById("t1");
+            var spnobj = document.getElementById("s1");
+
+            if(txtobj.value.trim() == "")
+        {
+            spnobj.innerHTML = "please enter user name";
+            txtobj.focus();
+        }
+        }
+
+        function validateage(){
+            var txtobj = document.getElementById("t2");
+            var spnobj = document.getElementById("s2");
+
+            if((event.key >= 0 && event.key <=9) || event.key == "Backspace")
+        {
+
+        }
+        else{
+          spnobj.innerHTML = "Age should allow only numbers";
+          event.preventDefault();
+        }
+        }
+    </script>
+</body>
+</html>

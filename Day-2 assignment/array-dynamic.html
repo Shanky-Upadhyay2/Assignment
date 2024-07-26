@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Dynamic Array</h2>
+    <hr>
+    Skill Name: <input type="text" id="t1">
+    <input type="button" onclick="get_data()" value="get data">
+    <input type="button" onclick="add_data()" value="add data">
+    <input type="button" onclick="remove_data()" value="remove data">
+
+    <ol id="o1">
+    </ol>
+
+    <script>
+        var skillsarray = ["html", "css", "js", "bootstrap", "sql"];
+
+        function get_data(){
+            
+            let listobj = document.getElementById("o1");
+            let str = "";
+
+            for(let item of skillsarray){
+                str += "<li>" + item + "</li>";
+            }
+            listobj.innerHTML = str;
+        }
+
+        function add_data(){
+            let listobj = document.getElementById("t1");
+            let index = skillsarray.indexOf(listobj.value);
+
+            if(index == -1){
+                skillsarray.push(listobj.value);
+                get_data();
+            }
+            else{
+                alert(listobj.value + "already exist");
+            }
+        }
+
+        function remove_data(){
+            let listobj = document.getElementById("t1");
+            let index = skillsarray.indexOf(listobj.value);
+
+            if(index == -1){
+                alert(listobj.value + "does not exist");
+            }
+
+            skillsarray.splice(index,1);
+            get_data();
+        }
+    </script>
+</body>
+</html>
