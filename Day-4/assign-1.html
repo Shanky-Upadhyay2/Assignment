@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript Dynamic Dom</h3>
+    <hr>
+    <input type="text" id="t1" placeholder="empno">
+    <input type="text" id="t2" placeholder="ename">
+    <input type="text" id="t3" placeholder="Job">
+    <input type="text" id="t4" placeholder="salary">
+
+    <input type="button" value="Add Rows" onclick="addrow()">
+    <br><br>
+    <table id="table1" border="2" width="500" celllpadding="10" cellspacing="2">
+        <tr>
+            <th>empno</th>
+            <th>ename</th>
+            <th>job</th>
+            <th>salary</th>
+        </tr>
+    </table>
+    
+    <script>
+
+        function addrow() {
+            var tblobj = document.getElementById("table1");
+
+            var txtobj1 = document.getElementById("t1");
+            var txtobj2 = document.getElementById("t2");
+            var txtobj3 = document.getElementById("t3");
+            var txtobj4 = document.getElementById("t4");
+
+            var rowobj = tblobj.insertRow(-1);
+
+            var cellobj1 = rowobj.insertCell(0);
+            var cellobj2 = rowobj.insertCell(1);
+            var cellobj3 = rowobj.insertCell(2);
+            var cellobj4 = rowobj.insertCell(3);
+
+            cellobj1.innerHTML = txtobj1.value;
+            cellobj2.innerHTML = txtobj2.value;
+            cellobj3.innerHTML = txtobj3.value;
+            cellobj4.innerHTML = txtobj1.value;
+        }
+    </script>
+</body>
+
+</html>
