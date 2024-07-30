@@ -1,0 +1,9 @@
+                              Assignment-5
+
+Q3.  What is setInterval()  and setTimeout() methods in JavaScript?
+Ans. The main difference between 'setTimeout' and 'setInterval' is that setTimeout executes the code only once after
+     the specified delay, while setInterval executes the code repeatedly at the specified interval.
+
+Q4.  What are promisees in JavaScript? Why do we use? 
+Ans. A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to
+     associate handlers with an asynchronous action's eventual success value or failure reason.

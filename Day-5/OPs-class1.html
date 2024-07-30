@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Javascript Object oriented programming</h3>
+    <hr>
+    <input type="button" onclick="buttonclick()" value="get data">
+
+    <script>
+        class person {
+            name = "";
+            age = 0;
+
+            constructor(name = "", age = 0) {
+                this.name = name;
+                this.age = age;
+            }
+
+            showdetails() {
+                var str = `person name:${this.name}, person age:${this.age}`;
+                console.log(str);
+            }
+
+        }
+
+        function buttonclick() {
+            var p1 = new person();
+            var p2 = new person("shanky");
+
+            var p3 = new person("shanky", 23);
+
+            var p4 = new person("shanky", 23.5);
+
+            p1.showdetails();
+            p2.showdetails();
+            p3.showdetails();
+            p4.showdetails();
+        }
+    </script>
+</body>
+
+</html>

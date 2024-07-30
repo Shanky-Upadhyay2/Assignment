@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Assignment-1</h3>
+    <hr>
+    <input type="button" value="get data" onclick="buttonclick()">
+    <div id="d1"></div>
+    <script>
+        class bankaccount {
+            accnumber = 0;
+            name = "";
+            city = "";
+            email = "";
+            phonenumber = 0;
+
+            constructor(accnumber, name) {
+                this.accnumber = accnumber;
+                this.name = name;
+            }
+        }
+
+        class fdaccount extends bankaccount {
+            fdamount = 0;
+            interestrate = "";
+            duration = 0;
+
+            constructor(accnumber, name, fdamount, interestrate, duration) {
+                super(accnumber, name);
+                this.fdamount = fdamount;
+                this.interestrate = interestrate;
+                this.duration = duration;
+            }
+
+        }
+        function buttonclick() {
+            var emp1 = new fdaccount(123, "shanky", 2500000, 8.5, "12%");
+            var str = `accnumber: ${emp1.accnumber}<br> name:${emp1.name}<br> fdamount:${emp1.fdamount}<br> interestrate:${emp1.interestrate}<br> duration:${emp1.duration}`;
+            document.getElementById("d1").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

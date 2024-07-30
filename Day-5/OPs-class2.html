@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript Object Oriented programming</h3>
+    <hr>
+    <input type="button" onclick="buttonclick()" value="get data" />
+
+    <script>
+        class person {
+            constructor() {
+                console.log("Message from super class constructor");
+                this.name = "shanky";
+                this.age = 23;
+            }
+        }
+
+        class employee extends person {
+            empid = 0;
+            job = "";
+
+            constructor() {
+                super();  //invokes parent class constructor
+                console.log("message from drived classes constructor");
+                this.empid = 546545;
+                this.job = "Analyst";
+
+            }
+            showdetails() {
+                console.log(`name: ${this.name}, age:${this.age}. empid:${this.empid}, job:${this.job}`);
+
+            }
+        }
+
+        function buttonclick() {
+            var emp1 = new employee();
+            emp1.showdetails();
+        }
+    </script>
+</body>
+
+</html>

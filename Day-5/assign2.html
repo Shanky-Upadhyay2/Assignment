@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 400px;
+            height: 400px;
+        }
+
+        #t2 {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        #b1 {
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+            /* margin-left: 30px; */
+            margin-bottom: 15px;
+            border-radius: 5px;
+
+        }
+
+        #b2 {
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+            /* margin-left: 30px; */
+            /* margin-bottom: 20px; */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Assignment 2</h3>
+    <hr>
+    <fieldset>
+        <legend>friend's name</legend>
+        Friend's Name : <input type="text" id="t1"><br>
+        contact number : <input type="text" id="t2"><br>
+        <input type="button" id="b1" value="add friend" onclick="addfriend()"><br>
+        <input type="button" id="b2" value="get contact number" onclick="getnumber()">
+    </fieldset>
+
+    <script>
+        var mapobj = new Map();
+        function addfriend() {
+            console.clear();
+            var txt1 = document.getElementById("t1");
+            var txt2 = document.getElementById("t2");
+
+            mapobj.set(txt1.value, txt2.value);
+            if (txt1.value && txt2.value) {
+                alert("Your friend have been added");
+                document.getElementById("t1").value = '';
+                document.getElementById("t2").value = '';
+            }
+            else {
+                alert("data is missing, friend can not be added");
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
