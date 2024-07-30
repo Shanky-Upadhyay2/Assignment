@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getevennumber(n){
+            return  n*2;
+        }
+        let arr1 = [1,2,3,4,5];
+        console.log(arr1);
+
+        let arr2 = arr1.map(Math.sqrt);
+        console.log(arr2);
+
+        let arr3 = arr1.map(getevennumber);
+            console.log(arr3);
+       
+    //    console.log(arr3);
+
+        let arr4 = arr1.map(function(n)
+    {
+        return n*5;
+    });
+
+    console.log(arr4);
+
+
+    let arr6 = arr1.map(n => n*11);
+    console.log(arr6);
+
+    let arr7 = arr1.map(n => n*n);
+    console.log(arr7);
+
+    </script>
+</body>
+</html>
