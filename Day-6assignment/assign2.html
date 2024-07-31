@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript Promise</h3>
+    <hr>
+    <div id="d1">
+
+    </div>
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        var divobj = document.getElementById("d1");
+
+        const promiseobj = new Promise((resolve, reject) => {
+            let n = Math.floor(Math.random() * 51);
+
+            if (n % 6 == 0) {
+                divobj.innerHTML = n;
+                resolve("This number is divisible by 6");
+            }
+            else {
+                reject("This number is not divisible by 6");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

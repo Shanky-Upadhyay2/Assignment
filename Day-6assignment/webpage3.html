@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript Mouse event handling</h3>
+    <hr>
+    <br><br>
+
+    <img src="images/images1.jpg" class="c1" height="40px" width="40px">
+    <img src="images/images2.jpg" class="c1" height="40px" width="40px">
+    <img src="images/images3.jpg" class="c1" height="40px" width="40px">
+    <img src="images/images4.jpg" class="c1" height="40px" width="40px">
+    <img src="images/images5.jpg" class="c1" height="40px" width="40px">
+    <br><br>
+
+    <img src="images/images1.jpg" id="bigimg" border="2" height="400px" width="400px">
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".c1").mouseover(function () {
+              let str =  $(this).attr("src");
+                $("#bigimg").attr("src",str);
+            });
+        });
+    </script>
+</body>
+
+</html>

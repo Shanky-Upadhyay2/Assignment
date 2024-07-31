@@ -1,0 +1,16 @@
+
+5. Find some details about following: 
+a.   How to hide html element using JavaScript?  jQuery?
+Ans.  jQuery hide() Method
+      The hide() method hides the selected elements.
+			
+b.  How to select all textboxes using jQuery selector? 
+Hint : Without using classname / id
+Ans.   $( ":text" ) allows us to select all <input type="text"> elements. As with other pseudo-class selectors
+      (those that begin with a ":") it is recommended to precede it with a tag name or some other selector; otherwise,
+      the universal selector ( "*" ) is implied.
+
+C.   What is the difference between   "this" and  $(this) in jquery programming?
+ans. this is the DOM object, whereas $(this) is the jQuery wrapper around same. When using this , you
+     can call DOM methods on it, but not jQuery methods. When using $(this) , you can call jQuery methods
+     on it, but not DOM methods.

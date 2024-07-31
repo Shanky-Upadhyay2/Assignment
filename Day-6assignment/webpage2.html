@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Javascript Jquery</h2>
+    <hr>
+    first number:<input type="text" id="t1">
+    second number:<input type="text" id="t2">
+    <input type="button"  value="add number" id="b1">
+    <input type="text" name="" id="t3">
+
+    <script src="jquery-3.7.1.js">
+    </script>
+
+    <script>
+        // // function buttonclick() {
+        // //     let x = $("#t1").val();
+        // //     let y = $("#t2").val();
+        // //     let z = parseInt(x) + parseInt(y);
+
+        // //     $("#t3").val(z);
+        // }
+
+        $(document).ready(function()
+    {
+         $("#b1").click(function(){
+            let x = $("#t1").val();
+            let y = $("#t2").val();
+            let z = parseInt(x) + parseInt(y);
+
+            $("#t3").val(z);
+         })
+    })
+    </script>
+</body>
+
+</html>

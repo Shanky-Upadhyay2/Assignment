@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript</h3>
+    <hr>
+
+    <button onclick="getdata()">Get data</button>
+    <br><br>
+    <table id="table1">
+
+    </table>
+
+
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        var tb1 = document.getElementById("table1");
+
+        async function getdata() {
+            let url = "https://www.w3schools.com/angular/customers.php";;
+            let response = await window.fetch(url);
+            let jsonResponse = await response.json();
+
+            let custarray = jsonResponse.records;
+            displaydata(custarray);
+        }
+
+        function displaydata(dataarry) {
+            let str = `<tr><td>Name</td> <td>City</td> <td>Country</td>`;
+            for (let item of dataarry) {
+                str += `<tr> <td>${item.Name}</td> - <span style="color:blue;"> <td>${item.City}</td>  <td>${item.Country}</td></span> </li>`
+            }
+
+            tb1.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

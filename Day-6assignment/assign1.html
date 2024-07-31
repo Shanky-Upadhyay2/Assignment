@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Javascript </h2>
+    <fieldset>
+        <legend>Total Amount</legend>
+        product name: <input type="text" id="t1">
+        Unit price : <input type="text" id="t2">
+        quantity : <input type="text" id="t3">
+
+        <input type="button" value="get data" id="b1">
+        <input type="text" name="" id="t4">
+    </fieldset>
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+     let sum = document.getElementById("t4");
+        $(document).ready(function () {
+            $("#b1").click(function () {
+
+                let up = $("#t2").val();
+                let qty = $("#t3").val();
+                let total = parseInt(up) * parseInt(qty);
+
+
+                if (qty < 1) {
+                    alert("Quantity can not be negative");
+
+                }
+
+                if (qty > 10 && qty <= 20) {
+                    total = total - (.05 * total);
+                    sum.innerHTML = total;
+
+                }
+
+                else if (qty > 20 && qty <= 30) {
+                    total = total - (.1 * total);
+                    sum.innerHTML = total;
+
+                }
+
+                else if (qty > 30) {
+                    total = total - (.15 * total);
+                    sum.innerHTML = total;
+
+                }
+            });
+
+        });
+
+
+    </script>
+</body>
+
+</html>
