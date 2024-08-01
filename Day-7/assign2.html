@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> jQuery Programming - DOM Traversing</h3>
+    <hr />
+
+
+    <table id="table1" border="2" width="400px">
+        <tr>
+            <th></th>
+            <td>Remove</td>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Units In Stock</th>
+        </tr>
+        <tr>
+            <td class="c2"><a href="#">Select</a></td>
+            <td class="c1"><a href="#">Remove</a></td>
+            <td>Printer</td>
+            <td>2500.00</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td class="c2"><a href="#">Select</a></td>
+            <td class="c1"><a href="#">Remove</a></td>
+            <td>4GB-RAM</td>
+            <td>1200.00</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="c2"><a href="#">Select</a></td>
+            <td class="c1"><a href="#">Remove</a></td>
+            <td>Printer</td>
+            <td>2500.00</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td class="c2"><a href="#">Select</a></td>
+            <td class="c1"><a href="#">Remove</a></td>
+            <td>1TB Samsung HDD</td>
+            <td>4500.00</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="c2"><a href="#">Select</a></td>
+            <td class="c1"><a href="#">Remove</a></td>
+            <td>32-GB Kingston USB</td>
+            <td>800.00</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td class="c2"><a href="#">Select</a></td>
+            <td class="c1"><a href="#">Remove</a></td>
+            <td>Wifi Router</td>
+            <td>1800.00</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#table1 .c2").click(function () {
+                $("#table1 tr").css("background-color", "white");
+                $(this).parent().css("background-color", "red");
+            });
+
+            $("#table1 .c1").on("click", function () {
+                $(this).closest("tr").remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

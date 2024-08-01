@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="Using  each - item" id="b1" />
+    <input type="button" value="Using  eq - index" id="b2" />
+
+    <ul id="list1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>BOOTSTRAP</li>
+        <li>JAVASCRIPT</li>
+        <li>ANGULAR</li>
+    </ul>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#list1 li").each(function () {
+                    alert($(this).text());
+                });
+
+            });
+
+            $("#b2").click(function () {
+                let n = $("#list1 li").length;
+                for (let i = 0; i < n; i++) {
+                    alert($("#list1 li").eq(i).text());
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

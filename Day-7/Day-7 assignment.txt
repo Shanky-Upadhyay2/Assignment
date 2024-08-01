@@ -1,0 +1,22 @@
+                                       Assignment Day-7
+
+4. Find the answers for the following questions: 
+a.   What is the eval() method?
+Ans. The eval() function in JavaScript is a global function that evaluates a string as if it were an expression and
+     returns the results. This function can execute both expressions and statements contained within the string.
+
+
+b.   What is the purpose of  prev() and next()  methods in jQuery? 
+Ans. The .prev() method in jQuery is used to get the immediately preceding sibling of each element in the set of
+     matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector. 
+   
+     The .next() method in jQuery is used to select the immediately following sibling of each element in a set of matched
+     elements. If a selector is provided, it retrieves the next sibling only if it matches that selector
+
+c.   How to delete all rows in a table except first row?
+Ans. First, we create a table using <table> tag and add a button containing btn id. When a user clicks on the button,
+     then the jQuery function is called. The jQuery function removes all the rows except the first one using the remove()
+     method.
+     $('#btn').click(function () {
+     $("#rTable").find("tr:gt(0)").remove();
+     });
