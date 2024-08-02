@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript</h3>
+    <hr>
+
+    enter a string:<input type="text" id="t1">
+    <ul id="l1"></ul>
+
+    <input type="button" id="b2" value="convert to list" />
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).click(function () {
+            let str = $("#t1").val();
+
+            let strResult = CharacterData(str);
+
+            $("#l1").html(strResult);
+        });
+
+        function CharacterData(inputstr) {
+            let outputstr = "";
+            let arr = inputstr.split(',');
+           let stringf = "";
+            for (let i = 0; i < arr.length; i++) {
+                stringf += `<li>${arr[i]}</li>`;
+                
+            }
+
+
+            return stringf.toUpperCase();
+        }
+    </script>
+</body>
+
+</html>

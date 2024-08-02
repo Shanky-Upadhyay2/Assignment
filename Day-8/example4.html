@@ -1,0 +1,62 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h3> jQuery Programming -- String Handling </h3>
+    <hr />
+
+    Enter a string : <input id="t1" /> <br /><br />
+    <input type="button" id="b1" value="Reverse String By Char" />
+    <input type="button" id="b2" value="Reverse String By Word" />
+    <h3 id="result"></h3>
+    <hr />
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#b1").click(function () {
+                let str = $("#t1").val();
+                let strResult = charcterReverse(str);
+                $("#result").html(str + "<br/>" + strResult);
+            });
+
+            $("#b2").click(function () {
+                let str = $("#t1").val();
+                let strResult = wordReverse(str);
+                $("#result").html(str + "<br/>" + strResult);
+            });
+
+        });
+
+
+
+
+        function charcterReverse(inputStr) {
+            let outputStr = "";
+            let arr = inputStr.split('');
+            arr.reverse();
+            outputStr = arr.join('');
+            return outputStr;
+        }
+
+        function wordReverse(inputStr) {
+            let outputStr = "";
+            let arr = inputStr.split(' ');
+            console.log(arr);
+            arr.reverse();
+            console.log(arr);
+            outputStr = arr.join(' ');
+            return outputStr;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

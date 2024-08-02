@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript</h3>
+    <hr>
+    <table style="border: 0px solid blue;" border="0" align="center">
+        <tr>
+            <td>Customer name:</td>
+            <td><input type="text" class="c1"></td>
+        </tr>
+        <tr>
+            <td>city name:</td>
+            <td><input type="text" class="c1"></td>
+        </tr>
+        <tr>
+            <td>Email-Id:</td>
+            <td><input type="text" class="c1"></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><input type="text" class="c1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("input[type='text']").focus(function () {
+                $(this).css({ "background-color": "pink", "color": "red" });
+            });
+
+            $("input[type='text']").blur(function () {
+                $(this).css({ "background-color": "white", "color": "black" });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
